@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume - Hongkham Suvannavong</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Orbitron', sans-serif;
+    }
+    body {
+      background: #000;
+      color: #ff4d6d;
+      padding: 20px;
+      line-height: 1.6;
+      animation: fadeIn 1s ease-in;
+      position: relative;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: radial-gradient(#ff1a4d 1px, transparent 1px);
+      background-size: 40px 40px;
+      opacity: 0.05;
+      z-index: 0;
+      animation: gridMove 20s linear infinite;
+    }
+    @keyframes gridMove {
+      from { background-position: 0 0; }
+      to { background-position: 40px 40px; }
+    }
+    header, section {
+      position: relative;
+      z-index: 1;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #ff1a4d;
+      animation: flicker 3s infinite;
+    }
+    @keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        text-shadow: 0 0 5px #ff1a4d, 0 0 10px #ff1a4d, 0 0 20px #ff1a4d;
+      }
+      20%, 24%, 55% {
+        text-shadow: none;
+      }
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid #ff1a4d;
+      margin: 10px auto;
+      display: block;
+      object-fit: cover;
+      box-shadow: 0 0 20px rgba(255, 26, 77, 0.8);
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { box-shadow: 0 0 10px #ff1a4d; }
+      to { box-shadow: 0 0 30px #ff1a4d; }
+    }
+    section {
+      background-color: rgba(255, 77, 109, 0.05);
+      border-left: 4px solid #ff1a4d;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+    section:hover {
+      transform: scale(1.02);
+    }
+    h2 {
+      border-bottom: 2px solid #ff1a4d;
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+      color: #ff1a4d;
+    }
+    ul {
+      list-style-type: none;
+    }
+    ul li::before {
+      content: '\f111';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      margin-right: 10px;
+      color: #ff4d6d;
+    }
+    .skills-bar {
+      background: #300014;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+    .skills-bar span {
+      display: block;
+      height: 18px;
+      background: #ff1a4d;
+      animation: fillBar 1.5s ease-out;
+    }
+    p i {
+      margin-right: 10px;
+      color: #ff4d6d;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fillBar {
+      from { width: 0%; }
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop hidden>
+    <source src="https://freesound.org/data/previews/264/264981_5002960-lq.mp3" type="audio/mpeg">
+  </audio>
+
+  <header>
+    <img src="IMG_20240215_172010OK.jpg" alt="Profile Photo" class="profile-pic">
+    <h1>Hongkham Suvannavong</h1>
+    <p><i class="fas fa-laptop-code"></i>IT Support | <i class="fas fa-shield-alt"></i>Admin Safety | <i class="fas fa-chalkboard-teacher"></i>Training | <i class="fas fa-user-shield"></i>Safety Officer</p>
+  </header>
+
+  <section>
+    <h2><i class="fas fa-address-book"></i> Contact Details</h2>
+    <ul>
+      <li><i class="fas fa-envelope"></i> hongkham.svnv@outlook.com</li>
+      <li><i class="fas fa-phone"></i> +856 20 58855817</li>
+      <li><i class="fas fa-map-marker-alt"></i> Vientiane Capital</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><i class="fas fa-id-card"></i> Personal Details</h2>
+    <ul>
+      <li>Date of Birth: 11/07/1989</li>
+      <li>Place of Birth: Nonsavanh, Saysetha District, Vientiane, Laos</li>
+      <li>Gender: Male</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+    <ul>
+      <li>1996-2001: Amorn School</li>
+      <li>2001-2004: Nongnieng Secondary School</li>
+      <li>2004-2007: Nonsavang High School</li>
+      <li>2007-2012: National University of Laos</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
+    <ul>
+      <li>2011 (Intern): Policy Bank - Network, Linux & Windows Servers, IT Support</li>
+      <li>2012-2022: IT Support at National Blood Center, Lao Red Cross</li>
+      <li>2023-2025: Contractor at Phu Bia Mining (Admin Safety, Admin Training, Safety Officer, IT Support)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><i class="fas fa-tools"></i> Skills Summary</h2>
+    <p>Microsoft Windows Server</p>
+    <div class="skills-bar"><span style="width: 80%"></span></div>
+    <p>Microsoft Windows</p>
+    <div class="skills-bar"><span style="width: 70%"></span></div>
+    <p>Microsoft Office</p>
+    <div class="skills-bar"><span style="width: 70%"></span></div>
+    <p>SQL Server</p>
+    <div class="skills-bar"><span style="width: 50%"></span></div>
+    <p>Graphic Design (Canva)</p>
+    <div class="skills-bar"><span style="width: 50%"></span></div>
+    <p>Adobe Premiere</p>
+    <div class="skills-bar"><span style="width: 50%"></span></div>
+  </section>
+
+  <section>
+    <h2><i class="fas fa-language"></i> Language Skills</h2>
+    <p>English</p>
+    <div class="skills-bar"><span style="width: 30%"></span></div>
+    <p>Thai</p>
+    <div class="skills-bar"><span style="width: 80%"></span></div>
+  </section>
+</body>
+</html>
